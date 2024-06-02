@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jive>
+    <adminConsole>
+        <interface>0.0.0.0</interface>
+        <port>9090</port>
+        <securePort>9091</securePort>
+    </adminConsole>
+    <connectionProvider>
+        <className>org.jivesoftware.database.EmbeddedConnectionProvider</className>
+    </connectionProvider>
+    <admin>
+        <authorizedJIDs>admin@localhost</authorizedJIDs>
+    </admin>
+    <locale>
+        <timeZone>Europe/Athens</timeZone>
+    </locale>
+    <autosetup>
+        <run>true</run>
+        <locale>en</locale>
+        <xmpp>
+            <auth>
+                <anonymous>false</anonymous>
+            </auth>
+            <domain>localhost</domain>
+            <fqdn>localhost</fqdn>
+        </xmpp>
+        <database>
+            <mode>embedded</mode>
+        </database>
+        <admin>
+            <email>admin@iti.com</email>
+            <password>adm1n!</password>
+        </admin>
+        <users>
+            <user1> <!-- Use incremental numbers for more users, eg: user2, user3 -->
+                <username>user</username> <!-- Required -->
+                <password>4s3r!</password> <!-- Required -->
+                <name>user</name>
+            </user1>
+        </users>
+    </autosetup>
+</jive>

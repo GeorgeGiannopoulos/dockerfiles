@@ -1,0 +1,17 @@
+version: '3.8'
+name: projectname
+services:
+    openfire:
+        image: ../path/to/repo/openfire:latest
+        build: .
+        container_name: projectname-openfire
+        restart: unless-stopped
+        volumes:
+            - openfire-lib:/var/lib/openfire/  # Where openfire's data is stored (data & config)
+            - openfire-log:/var/log/openfire/  # Where openfire's logs are stored
+        ports:
+            - "127.0.0.1:9090:9090"  # Unsecured Admin Console access
+            - "5222:5222"  # Standard port for clients to connect to the server
+volumes:
+    openfire-lib:
+    openfire-log:
