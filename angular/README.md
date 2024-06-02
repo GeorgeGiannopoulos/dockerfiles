@@ -49,6 +49,6 @@ docker run -idt -p 80:80 --name app app:latest
 
 - `Ahead-of-time (AOT) compilation` is used during the building phase to provide a faster rendering in the browser. Configure the app accordingly or remove the `--aot` argument from the `npm run build` command
 
-- The `nginx.conf` handles only requests to frontend. A separate reverse-proxy should be used for anything else
+- The `nginx.conf` handles only requests to frontend. A seperate reverse-proxy should be used for anything else
 
 - This image supports only HTTP requests. To add support for HTTPS encryption than a separate reverse-proxy with HTTP certificates must be used
