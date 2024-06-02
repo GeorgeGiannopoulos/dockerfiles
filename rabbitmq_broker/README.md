@@ -1,5 +1,7 @@
 # RabbitMQ Broker Dockerfile
 
+Use [RabbitMQ Client](https://github.com/GeorgeGiannopoulos/clients/tree/master/rabbitmq-client) to connect to it
+
 ## How it Works
 
 - An `rabbitmq` image is used

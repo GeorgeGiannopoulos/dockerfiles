@@ -1,5 +1,7 @@
 # InfluxDB Dockerfile
 
+Use [InfluxDB Client](https://github.com/GeorgeGiannopoulos/clients/tree/master/influx-client) to connect to it
+
 ## How it Works
 
 - A `influxdb` image is used

@@ -1,5 +1,7 @@
 # MQTT Broker Dockerfile
 
+Use [MQTT Client](https://github.com/GeorgeGiannopoulos/clients/tree/master/mqtt_client) to connect to it
+
 ## How it Works
 
 - An `eclipse-mosquitto` image is used

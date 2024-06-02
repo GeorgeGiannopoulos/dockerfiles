@@ -1,5 +1,7 @@
 # XMPP Server Dockerfile
 
+Use [XMPP Client](https://github.com/GeorgeGiannopoulos/clients/tree/master/xmpp_client) to connect to it
+
 ## How it Works
 
 - An `ubuntu` image is used
