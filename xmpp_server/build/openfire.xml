@@ -28,7 +28,7 @@
             <mode>embedded</mode>
         </database>
         <admin>
-            <email>admin@iti.com</email>
+            <email>admin@domain.com</email>
             <password>adm1n!</password>
         </admin>
         <users>
