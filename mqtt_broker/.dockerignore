@@ -1,0 +1,7 @@
+# docker
+docker-compose*.yml
+Dockerfile
+.dockerignore
+
+# Markdown
+*.md

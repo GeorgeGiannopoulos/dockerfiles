@@ -1,0 +1,20 @@
+version: '3.8'
+name: projectname
+services:
+    mqtt:
+        image: ../path/to/repo/mqtt:latest
+        build: .
+        container_name: projectname-mqtt
+        restart: unless-stopped
+        volumes:
+            - mqtt:/mosquitto                # NOTE: Needed so the installation script can initialize the below ones
+            - mqtt-config:/mosquitto/config  # Where mqqt broker's configuration is stored
+            - mqtt-data:/mosquitto/data      # Where mqqt broker's data is stored
+            - mqtt-log:/mosquitto/log        # Where mqqt broker's logs are stored
+        ports:
+            - "1883:1883"  # Unsecured connections
+volumes:
+    mqtt:
+    mqtt-config:
+    mqtt-data:
+    mqtt-log:
