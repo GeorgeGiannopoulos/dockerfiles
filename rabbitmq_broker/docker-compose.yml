@@ -1,0 +1,22 @@
+version: '3.8'
+name: projectname
+services:
+    broker:
+        image: ../path/to/repo/rabbitmq:latest
+        build: .
+        container_name: projectname-broker
+        restart: unless-stopped
+        volumes:
+            - broker-conf:/etc/rabbitmq/conf.d/  # Where RabbitMQ configuration is stored
+            - broker-data:/var/lib/rabbitmq      # Where RabbitMQ data is stored
+            - broker-logs:/var/log/rabbitmq      # Where RabbitMQ logs are stored
+            - ./broker/rabbitmq.conf:/etc/rabbitmq/conf.d/rabbitmq.conf  # Where custom RabbitMQ configuration is stored
+            - ./broker/definitions.json:/etc/rabbitmq/definitions.json   # Where custom RabbitMQ definitions is stored
+        ports:
+            - "5672:5672"    # Communication between RabbitMQ clients and the server (AMQP)
+            - "5671:5671"    # Secure Communication between RabbitMQ clients and the serverAMQP with TLS
+            - "127.0.0.1:15672:15672"  # RabbitMQ Management console (only available in rabbitmq:3.12-management)
+volumes:
+    broker-conf:
+    broker-data:
+    broker-logs:
