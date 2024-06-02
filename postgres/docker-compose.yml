@@ -1,0 +1,14 @@
+version: '3.8'
+name: projectname
+services:
+    database:
+        image: ../path/to/repo/database:latest
+        build: .
+        container_name: projectname-database
+        restart: unless-stopped
+        volumes:
+            - database:/var/lib/postgresql/data  # Where data is stored
+        ports:
+            - "127.0.0.1:5432:5432"  # HTTP protocol connection
+volumes:
+    database:
