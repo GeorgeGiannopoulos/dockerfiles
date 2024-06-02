@@ -12,11 +12,11 @@
 
 - The `VIRTUAL_ENV` directory is added at the beginning of the `PATH` environmental variable to shadow the default python executables
 
-- The virtual environment's `pip` is updated to the latest version
+- The virtual environmental's `pip` is updaded to latest version
 
-- The python `wheel` package is installed to ensure better package installation process
+- The python `wheel` package is installed to ensure better package installation proccess
 
-- Change working directory to where the project's code will be resided
+- Change working directory to where the project's code will be reside
 
 - The project's python dependencies are copied to the project's home directory and are installed
 
