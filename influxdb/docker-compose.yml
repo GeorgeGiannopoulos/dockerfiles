@@ -1,0 +1,17 @@
+version: '3.8'
+name: projectname
+services:
+    influxdb:
+        image: ../path/to/repo/influxdb:latest
+        build: .
+        container_name: projectname-influxdb
+        restart: unless-stopped
+        volumes:
+            - influxdb-data:/var/lib/influxdb2  # Where influxdb data is stored
+            - influxdb-conf:/etc/influxdb2      # Where configuration is stored
+        ports:
+            - "127.0.0.1:8086:8086"  # HTTP protocol connection
+
+volumes:
+    influxdb-data:
+    influxdb-conf:
