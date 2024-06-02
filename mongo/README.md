@@ -8,7 +8,7 @@
 
 - A default version of a mongo configuration is copied to mongo installation directory
 
-- An initialization `.js` is copied to docker entrypoint init directory to initialize the database with users/tables e.t.c. An example .js is located inside **init** directory
+- An initialization `.js` is copied to docker entrypoint init directory to initialize the database with users/tables e.t.c.. An example .js is located inside **init** directory
 
 - The port 27017 is exposed
 
@@ -18,7 +18,7 @@
 
 1. Select a `mongo` image version that matches the one used to develop the project (replace `latest`)
 
-2. Change the default `username`, `password` and `DB's name`. (This considers a **security leak**. There are other approaches)
+2. Change the default `username`, `password` and `DB's name`. (This consider a **security leak**. There are other approaches)
 
 3. Change the configuration file according to project's requirements
 
