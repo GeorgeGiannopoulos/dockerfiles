@@ -6,9 +6,9 @@
 
 - An environmental variable named `PROJECT_HOME` is used to keep the path of the project inside the image
 
-- The `pip` is updated to the latest version
+- The `pip` is updaded to latest version
 
-- Change working directory to where the project's code will be resided
+- Change working directory to where the project's code will be reside
 
 - The project's python dependencies are copied to the project's home directory and are installed
 
